@@ -1,0 +1,430 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madrasa Portal - Single Page PHP Web Application</title>
+    <style>
+        :root {
+            --main: #2A76D2;
+            --dark: #151B27;
+            --light: #F5F7FB;
+            --card: #fff;
+            --text: #222;
+            --accent: #55C594;
+            --radius: 12px;
+            --shadow: 0 2px 16px rgba(0,0,0,0.10);
+            --transition: all 0.25s ease;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: "Segoe UI", Roboto, Arial, sans-serif;
+            background: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        a {
+            color: var(--main);
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        header {
+            background: var(--main);
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        
+        .hero {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .card {
+            background: var(--card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .card h2 {
+            color: var(--main);
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+        
+        .card h3 {
+            margin: 1.5rem 0 0.5rem 0;
+        }
+        
+        ul, ol {
+            margin-left: 1.5rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .feature {
+            background: var(--card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 1.5rem;
+            transition: var(--transition);
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature h3 {
+            margin-top: 0;
+            color: var(--main);
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .screenshot {
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            max-width: 100%;
+            height: auto;
+            margin: 1rem 0;
+        }
+        
+        pre {
+            background: var(--dark);
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        code {
+            font-family: 'Courier New', monospace;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--main);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            transition: var(--transition);
+        }
+        
+        .btn:hover {
+            background: var(--accent);
+            text-decoration: none;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Madrasa Portal</h1>
+            <p>A Single-Page PHP Web Application with SQLite</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section class="hero">
+            <h1>Comprehensive Management System for Islamic Schools</h1>
+            <p>A modern, responsive, feature-rich web application designed specifically for madrasas (Islamic schools) to manage their operations efficiently.</p>
+            <a href="https://github.com/yasinULLAH/madrasa-home-page" class="btn" target="_blank">View on GitHub</a>
+        </section>
+        
+        <div class="card">
+            <h2>About Madrasa Portal</h2>
+            <p>Madrasa Portal is a comprehensive single-page PHP web application that uses SQLite as its backend database. It provides a complete management solution for Islamic schools, enabling them to manage announcements, teachers, courses, timetables, resources, and more - all from a single interface.</p>
+            
+            <p>The application is built with modern web technologies and follows best practices for performance, security, and user experience. It features a responsive design that works well on all devices, from desktop computers to mobile phones.</p>
+        </div>
+        
+        <div class="card">
+            <h2>Key Features</h2>
+            
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">📢</div>
+                    <h3>Announcements</h3>
+                    <p>Create, manage and display important announcements for students and parents.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">👨‍🏫</div>
+                    <h3>Teacher Management</h3>
+                    <p>Maintain detailed profiles of teachers, including their qualifications, experience, and subjects.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">📚</div>
+                    <h3>Course Management</h3>
+                    <p>Organize courses with details like duration, fees, instructors, and capacity.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">🕒</div>
+                    <h3>Timetable Management</h3>
+                    <p>Create and display class schedules by day, time, teacher, and room.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">🖼️</div>
+                    <h3>Media Gallery</h3>
+                    <p>Showcase school events, activities, and facilities with a categorized image gallery.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">📥</div>
+                    <h3>Resource Library</h3>
+                    <p>Upload and manage downloadable resources for students and parents.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">❓</div>
+                    <h3>FAQ Management</h3>
+                    <p>Create and categorize frequently asked questions to assist visitors.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">💬</div>
+                    <h3>Testimonials</h3>
+                    <p>Collect and display testimonials from students and parents with approval workflow.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">✉️</div>
+                    <h3>Contact Management</h3>
+                    <p>Receive and respond to inquiries through the contact form.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>User Roles</h2>
+            
+            <h3>Public Users</h3>
+            <p>Visitors to the site can:</p>
+            <ul>
+                <li>View the homepage with general information about the madrasa</li>
+                <li>Browse announcements and news</li>
+                <li>Check class timetables</li>
+                <li>View teacher profiles</li>
+                <li>Explore available courses</li>
+                <li>View and filter the gallery</li>
+                <li>Download resources</li>
+                <li>Read testimonials and submit their own</li>
+                <li>Read FAQs</li>
+                <li>Submit inquiries through the contact form</li>
+            </ul>
+            
+            <h3>Admin Users</h3>
+            <p>Administrators can:</p>
+            <ul>
+                <li>Access the admin dashboard with statistics and quick actions</li>
+                <li>Create, edit, and delete announcements</li>
+                <li>Manage teacher profiles</li>
+                <li>Add, update, and remove courses</li>
+                <li>Create and manage class timetables</li>
+                <li>Upload and organize gallery images</li>
+                <li>Manage downloadable resources</li>
+                <li>Approve and manage testimonials</li>
+                <li>Create and organize FAQs</li>
+                <li>View and respond to contact form submissions</li>
+                <li>Update site settings</li>
+                <li>View activity logs</li>
+                <li>Edit profile and change password</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h2>Technical Specifications</h2>
+            
+            <h3>Backend</h3>
+            <ul>
+                <li>PHP 7.4+ for server-side logic</li>
+                <li>SQLite database for data storage</li>
+                <li>RESTful API architecture for data operations</li>
+                <li>Single file application for easy deployment</li>
+            </ul>
+            
+            <h3>Frontend</h3>
+            <ul>
+                <li>HTML5, CSS3, and JavaScript</li>
+                <li>Responsive design that works on all devices</li>
+                <li>Single-page application (SPA) architecture</li>
+                <li>No page reloads - content loaded dynamically via AJAX</li>
+                <li>Dark/light mode theme toggle</li>
+                <li>Accessibility features</li>
+            </ul>
+            
+            <h3>Security Features</h3>
+            <ul>
+                <li>Secure password hashing using PHP's password_hash()</li>
+                <li>Session-based authentication</li>
+                <li>Input sanitization to prevent XSS attacks</li>
+                <li>CSRF protection</li>
+                <li>Activity logging for admin actions</li>
+                <li>Secure file upload handling</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h2>Installation Instructions</h2>
+            
+            <ol>
+                <li>Ensure your server has PHP 7.4+ with SQLite extension enabled</li>
+                <li>Download the single PHP file (index.php)</li>
+                <li>Create an 'uploads' directory in the same location and make it writable</li>
+                <li>Upload the file to your web server</li>
+                <li>Access the application through your web browser</li>
+                <li>Log in with default credentials (username: admin, password: admin123)</li>
+                <li>Change the default password immediately</li>
+            </ol>
+            
+            <h3>Server Requirements</h3>
+            <ul>
+                <li>PHP 7.4 or higher</li>
+                <li>SQLite extension</li>
+                <li>GD or ImageMagick extension (for image processing)</li>
+                <li>Write permissions for the application directory (for SQLite database and uploads)</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h2>Usage Guide</h2>
+            
+            <h3>Admin Login</h3>
+            <p>To access the admin functionalities:</p>
+            <ol>
+                <li>Click on the "Admin" link in the navigation menu</li>
+                <li>Enter your username and password</li>
+                <li>After successful login, you'll be redirected to the admin dashboard</li>
+            </ol>
+            
+            <h3>Managing Content</h3>
+            <p>As an admin, you can manage various types of content through their respective pages. The typical workflow is:</p>
+            <ol>
+                <li>Navigate to the section you want to manage (e.g., Announcements, Teachers, Courses)</li>
+                <li>Use the "Add" button to create new entries</li>
+                <li>Use the "Edit" button to modify existing entries</li>
+                <li>Use the "Delete" button to remove entries</li>
+            </ol>
+            
+            <h3>Site Settings</h3>
+            <p>To customize the site:</p>
+            <ol>
+                <li>Log in as an admin</li>
+                <li>Go to the admin dashboard</li>
+                <li>Click on "Site Settings"</li>
+                <li>Navigate through the tabs to update various settings</li>
+                <li>Click "Save Settings" to apply changes</li>
+            </ol>
+        </div>
+        
+        <div class="card">
+            <h2>Customization</h2>
+            
+            <p>The application is designed to be easily customizable. Here are some common customizations:</p>
+            
+            <h3>Changing Theme Colors</h3>
+            <p>To modify the color scheme, edit the CSS variables in the :root selector at the beginning of the style section:</p>
+            <pre><code>:root {
+    --main: #2A76D2;    /* Primary color */
+    --dark: #151B27;    /* Dark color for footer and dark mode background */
+    --light: #F5F7FB;   /* Light background color */
+    --card: #fff;       /* Card background color */
+    --text: #222;       /* Main text color */
+    --accent: #55C594;  /* Accent color for highlights and hover states */
+    /* ... */
+}</code></pre>
+            
+            <h3>Adding New Features</h3>
+            <p>To add new functionality:</p>
+            <ol>
+                <li>Add appropriate table(s) to the database initialization in the PHP section</li>
+                <li>Create API endpoints for the new feature</li>
+                <li>Add UI elements and JavaScript functions for the new feature</li>
+                <li>Update the navigation menu if needed</li>
+            </ol>
+        </div>
+        
+        <div class="card">
+            <h2>Default Admin Credentials</h2>
+            <p class="text-center">Username: <strong>admin</strong><br>Password: <strong>admin123</strong></p>
+            <p class="text-center"><strong>Important:</strong> Change these credentials immediately after first login!</p>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>Madrasa Portal - A Single-Page PHP Web Application</p>
+            <p>Developed as a modern solution for Islamic schools</p>
+        </div>
+    </footer>
+</body>
+</html>
